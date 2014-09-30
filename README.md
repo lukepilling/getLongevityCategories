@@ -2,7 +2,7 @@
 
 R function to bin population study participants into short-, intermediate-, and long-lived categories based on the age of death of their parents
 
-Luke C. Pilling | L.Pilling@exeter.ac.uk
+Luke C. Pilling | L.Pilling@exeter.ac.uk   
 Epidemiology and Public Health Group, University of Exeter Medical School, U.K.
 
 Function adapted from analyses by Ambarish Dutta et al. 
@@ -13,18 +13,18 @@ In turn based on an analysis by Cheung and Robine, describing the "normal fittin
 > "Increase in common longevity and the compression of mortality: the case of Japan" 
 > Population studies, 2007. DOI: 10.1080/00324720601103833. PMID: 17365875
  
-    
+
 ## Description
 
 This function [ getLongevityCategories() ] will return a list of values corresponding to the cut-offs that should be applied to the participants (i.e. the "offspring") to categorise them as long-, intermediate-, or short-lived based on the age at death of the parents.
 
 The function will also create a PDF file displaying the cut-offs graphically on histograms of age-at-death of the mothers and fathers separately.
 
-### Essential inputs;
+#### Essential inputs;
 * ageMum == vector of age at death of mother for all participants (missings OK)
 * ageDad == vector of age at death of father for all participants (missings OK)
 
-### Optional inputs;
+#### Optional inputs;
 * doPlots           ==  create a PDF file with plots - default is TRUE  
 * pdfFilename       ==  file name for PDF output - default is "Parental_age_at_death.DATE.pdf"  
 * returnCategories  ==  default=TRUE -- return vector for all participants categorising them as offspring of;  
@@ -93,8 +93,8 @@ __Offspring categorised by age-of-death of both parents__
 [NA] N=16415  Not dead (one or both parents not recorded as dead)
 ```
 
-##### Parental_age_at_death.2014-09-30.pdf
+#### Parental_age_at_death.2014-09-30.pdf
 
-Histograms showing the age at death of mothers are fathers with the imputed normal distribution of age-at-death and categories based on this distribution.
+Histograms showing the age at death of mothers and fathers with the imputed normal distribution of age-at-death and categories based on this distribution.
 
 ![Histograms of parental longevity with imputed categories](http://s2.postimg.org/6tf4fyk89/example.png)
