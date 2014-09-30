@@ -62,7 +62,7 @@ getLongevityCategories <- function(
     ageMum.all <- ageMum
     ageDad.all <- ageDad
     
-    ## remove missing values
+    ## remove missing and unrealistic (e.g. missings are coded as 0 in some cohorts) values
     ageMum <- ageMum[ !is.na(ageMum)  &  ageMum >= 10 ]
     ageDad <- ageDad[ !is.na(ageDad)  &  ageDad >= 10 ]
     
