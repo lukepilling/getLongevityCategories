@@ -13,7 +13,7 @@
 ####      "Increase in common longevity and the compression of mortality: the case of Japan"
 ####      Population studies, 2007. DOI: 10.1080/00324720601103833. PMID: 17365875
 ####      
-####  Version 0.140925
+####  Version 0.140930
 ####      
 #####################################################################################################################
 #####################################################################################################################
@@ -63,8 +63,8 @@ getLongevityCategories <- function(
     ageDad.all <- ageDad
     
     ## remove missing values
-    ageMum <- ageMum[ !is.na(ageMum) ]
-    ageDad <- ageDad[ !is.na(ageDad) ]
+    ageMum <- ageMum[ !is.na(ageMum)  &  ageMum >= 10 ]
+    ageDad <- ageDad[ !is.na(ageDad)  &  ageDad >= 10 ]
     
     ##############################################################################################################################
     ## get summary statistics for most common age at death
